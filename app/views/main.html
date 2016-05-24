@@ -1,0 +1,18 @@
+<div class="col-md-12 forecast">
+  <div class="">
+    <h1>{{ ::place.location.city }}, {{ :: place.location.region }}</h1>
+  <div class="col-md-3">
+      <h1>{{ ::place.item.condition.temp }}&#x2109;</h1>
+  </div>
+  <div class="col-md-9">
+    <img src="http://l.yimg.com/a/i/us/we/52/{{place.item.condition.code}}.gif"/>
+      <br>
+      <small>{{ ::place.item.condition.text }}</small>
+  </div>
+    <div class="forecast-day" ng-repeat="forecast in place.item.forecast | limitTo: 5 : 2">
+      <p><strong>{{ forecast.day }}</strong></p>
+      <p>{{ forecast.high }}&#x2109; / {{ forecast.low }}&#x2109;</p>
+      <p><img src="http://l.yimg.com/a/i/us/we/52/{{forecast.code}}.gif"/></p>
+    </div>
+  </div>
+</div>
