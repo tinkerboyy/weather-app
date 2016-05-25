@@ -13,7 +13,7 @@ angular.module('frontEndApp')
       restrict: 'EA',
       templateUrl: 'scripts/directives/forecast.html',
       scope: {
-        place: '=collection'
+        place: '=forecast'
       }
     };
   }
