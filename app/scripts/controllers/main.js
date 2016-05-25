@@ -11,7 +11,7 @@ angular.module('frontEndApp')
   .controller('MainCtrl', function ($scope, WeatherService) {
     WeatherService.getWeather()
       .then(function(data) {
-        $scope.place = data;
+        $scope.weather = data;
       });
   })
   .factory('WeatherService', function($http, $q) {
@@ -31,4 +31,4 @@ angular.module('frontEndApp')
       return {
         getWeather: getWeather
       };
-    });
+  });

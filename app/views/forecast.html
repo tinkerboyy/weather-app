@@ -1,0 +1,18 @@
+<div class="forcast-widget">
+      <h2>{{ ::place.location.city }}, {{ ::place.location.region }}</h2>
+      <div class="conditions">
+        <div class="temperature">{{ ::place.item.condition.temp }}&deg;</div>
+        <div class="forecast-icon">
+          <p><img src="http://l.yimg.com/a/i/us/we/52/{{place.item.condition.code}}.gif"/></p>
+          <p><small class="condition-text">{{ ::place.item.condition.text }}</small></p>
+        </div>
+      </div>
+      <div class="forecast-display">
+        <ul class="forecast-list">
+          <li class="forecast-day" ng-repeat="forecast in place.item.forecast | limitTo: 5 : 1">
+            <span><strong>{{ ::forecast.day }}</strong></span><br>
+            <span><small>{{ ::forecast.high }}&deg; / {{ ::forecast.low }}&deg;</small></span>
+          </li>
+        </ul>
+      </div>
+  </div>
