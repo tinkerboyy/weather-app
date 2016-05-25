@@ -11,9 +11,10 @@ angular.module('frontEndApp')
   .directive('forecastWidget', function() {
     return {
       restrict: 'EA',
-      templateUrl: '../../views/forecast.html',
+      templateUrl: 'scripts/directives/forecast.html',
       scope: {
         place: '=collection'
       }
     };
-  });
+  }
+);
